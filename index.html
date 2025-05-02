@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="scripts.js"></script>
+  </head>
+  <link rel="stylesheet" href="styles.css" />
+  <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+    <section style="padding: 1rem">
+      <!-- <div class="container">
+        <div class="card5" id="card1">
+          <img
+            class="profilePicture"
+            src="Images/Professional_Pic.jpg"
+            alt=""
+          />
+        </div>
+        <div class="card5" id="card2">     
+           <div class="list">
+             <h2>Adedewe Abiodun</h2>
+                       <h3>Geospatial Developer<h3>
+              <p>Bringing Imagination to existence</p>
+           </div>
+          </div>
+      </div>
+
+      <div class="adjust-style">
+        <button onclick="changeStyle()">.
+      </div> -->
+      <div class="card testimonial">
+        <div class="grid grid--1x2">
+          <div class="testimonial__image">
+            <img
+              src="Images/Professional_Pic.jpg"
+              alt="A happy smilling customer"
+            />
+          </div>
+          <div>
+            <blockquote class="quote">
+              <footer>
+                <div class="media">
+                  <div class="media__image"></div>
+                  <div class="media__body">
+                    <h3 class="media__title quote__author">Adedewe Abiodun</h3>
+                    <p class="quote__organisation">
+                      I am a Frontend Engineer
+                    </p>
+                    <p class="top-button"><button class="contact">Contact me</button>
+                    <button class="cv-button">Download CV</button></p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding: 1rem">
+      <!-- <div class="container">
+        <div class="card5" id="card3">
+          <div class="map-container">
+            <div class="icons">
+              <img src="Images/gps_15391795.png" alt="" />
+              <img src="Images/browser_2127390.png" alt="" />
+              <img src="Images/location_17675754.gif" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="card5" id="card2">
+          <div>
+            <h2>ABOUT ME</h2>
+            <p>
+              Creating a website with special features such as interactive
+              maps.Modern cartography applies to our day to day life. In my own
+              view all our daily life's revolves around modern cartography. From
+              navigation including the use of self driving cars, use of google
+              maps and Google street view to our health through mapping of
+              disease out breaks, to disaster out break such as mapping of
+              places affected by Earth quake to pre and post mapping of climate
+              impact and extreme event. Cartography development in the next
+              decade for me is the one with maps level of precision map that
+              better representation both pre and post extreme events and climate
+              impact. Also cartography development in the next decade should be
+              the one with it's product extended to all parts of the world
+              hether it is developed, developing or underdeveloped country
+              interms of up till date map of their country, proper map
+              documentation of out break and monitoring of disaster and extreme
+              events, etc.
+            </p>
+          </div>
+        </div>
+      </div> -->
+      <div class="card testimonial" id="aboutSection">
+        <div class="grid grid--1x2">
+          <div class="testimonial__image">
+            <img
+              src="Images/location_17675754.gif"
+              alt="A happy smilling customer"
+            />
+          </div>
+  
+          <div>
+            <blockquote class="quote">
+              <footer>
+                <div class="media">
+                  <div class="media__image"></div>
+                  <div class="media__body">
+                    <h3 class="media__title quote__author">ABOUT ME</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Nobis, laborum aperiam. Rem, impedit? Debitis dolorum
+                      tenetur eaque odit, qui ullam excepturi, vel vitae, quia
+                      nulla minus cumque. Facere, provident ess.
+                    </p>
+                    <ul class="top">
+                      <li><button id="downloadCV" class="cv-button">Download CV</button></li>
+                      
+                      <li><a href="#" id="githubLink" class="social"><img src="Images/github_5968866.png" alt=""></a></li>
+                      <li>
+                        <a href="mailto:abiodunfaithadedewe@gmail.com" class="social" id="emailLink">
+                            <img src="Images/icons8-email.gif" alt="Email">
+                        </a>
+                    </li>                  
+                      <li><a href="" class="social" id="linkedIn"><img src="Images/linkedin_2504923.png" alt="" /></a></li>
+                    
+                    </ul>
+                    </p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="skills-section">
+      <h2 class="skills-title">SKILLS</h2>
+      <div class="skills-container">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JAVASCRIPT</span>
+        <span class="skill">LEAFLETS</span>
+        <!-- <span class="skill">PYTHON</span> -->
+      </div>
+    </section>
+    <section>
+
+      <h2 class="skills-section skills-title">PROJECTS</h2>
+
+
+      <div class="info-container" id="infoContainer">
+        <!-- Info boxes will be dynamically added here -->
+      </div>
+    </section>
+    <!-- Scripts -->
+    <!-- <script src="scripts.js"></script> -->
+     <section>
+       <!-- <EMAIL-JS -->
+    <div class="contact-container">
+      <h2>CONTACT ME</h2>
+      <form class="cont_me" id="contact-form">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit" class="btn-submit">Send</button>
+
+      </form>
+    </div>
+    <!-- EMAILJS -->
+     </section>
+     <!-- <script src="scripts.js"></script> -->
+  </body>
+</html>
