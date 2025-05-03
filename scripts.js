@@ -179,3 +179,9 @@ class SmoothScroller {
 // Optional: pass offset (in pixels) if you have a fixed header
 const scroller = new SmoothScroller('.scroll-link', 50); // adjust 50 if you have a header height
 
+
+// MENU TOGGLE
+
+function toggleMenu() {
+  document.getElementById('navList').classList.toggle('show');
+}

@@ -13,142 +13,93 @@ body {
   align-items: center; */
   /* height: 100vh; */
 }
-
-/*REAL NAVIGATION BAR */
-      /* Reset default margin and padding */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Navbar container */
-      .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #1c1633; /* Deep purple like your image */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bottom shadow */
-        z-index: 1000;
-      }
-
-      /* Navigation items */
-      .nav-list {
-        display: flex;
-        /* justify-content: space-around; */
-        align-items: center;
-        list-style: none;
-        padding: 1rem 2rem;
-      }
-
-      /* Links */
-      .nav-list li a {
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-        margin: 0 1rem; /* Adds spacing between links */
-      }
-
-      .nav-list li a:hover {
-        color: #ffcc00; /* Yellowish hover effect */
-      }
-
-      /* Responsive font size */
-      @media (max-width: 768px) {
-        .nav-list li a {
-          font-size: 0.85rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .nav-list {
-          font-size: 0.5rem;
-          /* flex-direction: column; */
-        }
-
-        .nav-list li {
-          margin: 0.5rem 0;
-        }
-      }
-
-      /* REAL NAVIGATION BAR */
-      /* Reset default margin and padding */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Navbar container */
-      .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #1c1633; /* Deep purple like your image */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bottom shadow */
-        z-index: 1000;
-      }
-
-      /* Navigation items */
-      .nav-list {
-        display: flex;
-        /* justify-content: space-around; */
-        align-items: center;
-        list-style: none;
-        padding: 1rem 2rem;
-      }
-
-      /* Links */
-      .nav-list li a {
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-        margin: 0 1rem; /* Adds spacing between links */
-      }
-
-      .nav-list li a:hover {
-        color: #ffcc00; /* Yellowish hover effect */
-      }
-
-      /* Responsive font size */
-      @media (max-width: 768px) {
-        .nav-list li a {
-          font-size: 0.85rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .nav-list {
-          font-size: 0.5rem;
-          /* flex-direction: column; */
-        }
-
-        .nav-list li {
-          margin: 0.5rem 0;
-        }
-      }
-/* NAVIGATION BAR */
-
-body {
-  margin: 0;
-  padding: 0;
+/* REAL NAV */
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1c1633; /* Deep purple */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
 }
 
+/* Navigation list */
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 1rem;
+}
 
-
+/* Navigation links */
 .nav-list li a {
   color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  margin-right: 1.5rem;
+  transition: color 0.3s ease;
+  margin: 1rem;
 }
 
-/* NAVIGATION BAR END */
+.nav-list li a:hover {
+  color: #ffcc00;
+}
+
+/* Hamburger toggle button (hidden on large screens) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Responsive styles for screens ≤768px */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background-color: #1c1633;
+    padding: 1rem 2rem;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-list li {
+    margin: 0.75rem 0;
+  }
+}
+
+/* Responsive font tweaks */
+@media (max-width: 768px) {
+  .nav-list li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list li a {
+    font-size: 0.8rem;
+  }
+}
+/* REAL NAV ENDS */
 /* 
 .container {
   position: relative;
