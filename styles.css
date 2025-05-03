@@ -538,7 +538,7 @@ form textarea {
 form button {
 
   padding: 12px;
-  background: #000000;
+  /* background: #000000; */
   color: #ffffff;
   font-size: 16px;
   border: none;
@@ -574,8 +574,8 @@ form button:hover {
     align-items: center;
     margin: 0 auto; /* Horizontally center in block-level parent */
     padding: 12px 24px;
-    background: #000000;
-    color: #ffffff;
+    /* background: #000000; */
+    color: #000000;
     font-size: 16px;
     border: none;
     border-radius: 8px;
@@ -590,9 +590,9 @@ form button:hover {
     transform: scale(1.05);
 }
 
-.cont_me {
-  margin: 5rem;
-}
+/* .cont_me {
+  margin-bottom: 5rem;
+} */
 
 
       

@@ -141,3 +141,41 @@ document
       );
   });
 
+
+  // SCROOLLER
+  // SmoothScroller Class Definition
+class SmoothScroller {
+  constructor(linkSelector, offset = 0, duration = 500) {
+    this.links = document.querySelectorAll(linkSelector); // all elements with .scroll-link
+    this.offset = offset;
+    this.duration = duration;
+    this.init();
+  }
+
+  init() {
+    // Attach event listener to each link
+    this.links.forEach(link => {
+      link.addEventListener('click', (e) => this.scrollHandler(e));
+    });
+  }
+
+  scrollHandler(event) {
+    event.preventDefault(); // prevent default anchor jump
+
+    const targetId = event.currentTarget.getAttribute('href'); // e.g. "#about"
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      const topPosition = targetElement.offsetTop - this.offset;
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth' // smooth scroll
+      });
+    }
+  }
+}
+
+// Initialize the scroller with your class or ID selector
+// Optional: pass offset (in pixels) if you have a fixed header
+const scroller = new SmoothScroller('.scroll-link', 50); // adjust 50 if you have a header height
+
