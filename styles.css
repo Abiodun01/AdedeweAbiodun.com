@@ -166,7 +166,7 @@ nav.container {
 .top {
   list-style: none;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   word-spacing: 2rem;
   padding: 2rem;
   gap: 2rem;
@@ -178,7 +178,8 @@ nav.container {
  /* Stack items vertically */
     align-items: center; /* Center items */
     word-spacing: normal; /* Reset word spacing */
-    gap: 0.1rem; /* Reduce the gap */
+    /* gap: 0.1rem; */
+     /* Reduce the gap */
     padding: 0.1rem; /* Reduce padding */
   }
 }
@@ -305,7 +306,7 @@ nav.container {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
-  margin: 3rem;
+  margin: 4rem 2rem;
   height: 600px;
 }
 
@@ -378,6 +379,12 @@ nav.container {
 
 .media__body {
   margin: 0 2rem;
+
+}
+@media (min-width: 1024px) {
+  .media__body {  margin-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;}
 }
 
 .media__title {
@@ -395,6 +402,13 @@ nav.container {
   opacity: .4;
   font-size: 2rem;
   font-style: normal;
+}
+
+.btn-top {
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
 }
 
 
