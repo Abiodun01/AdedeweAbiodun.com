@@ -59,15 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sample info box data (Modify this dynamically)
   const infoData = [
       {
-          title: "Project 1",
-          text: "Description of the first project.",
-          image: "Images/SealEVEL.jpg",
-          github: "https://github.com/Abiodun01/Sea-Level-Rise-Impact-App",
-          website: "https://abiodun01.github.io/Sea-Level-Rise-Impact-App/#"
+          title: "Project: Sea-Level Rise Impact Tool",
+          text: "Explore how rising sea levels could reshape Lagos by 2050, 2100, and 2150 with this interactive map based on IPCC projections and high-resolution elevation data.",
+          image: "Images/2SealEVEL.jpg",
+          github: "https://github.com/Abiodun01/Modified-Sea-Level",
+          website: "https://lagos-sea-level-rise-impact-tool.vercel.app/"
       },
       {
-          title: "Project 2",
-          text: "Description of the second project.",
+          title: "Project: Moshify App",
+          text: "A simple website design",
           image: "Images/Moshify_Website.jpg",
           github: "https://github.com/Abiodun01/New_Mushify_App.git",
           website: "https://abiodun01.github.io/New_Mushify_App/"
@@ -144,40 +144,55 @@ document
 
   // SCROOLLER
   // SmoothScroller Class Definition
+// SmoothScroller Class Definition
 class SmoothScroller {
   constructor(linkSelector, offset = 0, duration = 500) {
-    this.links = document.querySelectorAll(linkSelector); // all elements with .scroll-link
+    this.links = document.querySelectorAll(linkSelector);
     this.offset = offset;
     this.duration = duration;
     this.init();
   }
 
   init() {
-    // Attach event listener to each link
     this.links.forEach(link => {
       link.addEventListener('click', (e) => this.scrollHandler(e));
     });
   }
 
   scrollHandler(event) {
-    event.preventDefault(); // prevent default anchor jump
+    event.preventDefault();
 
-    const targetId = event.currentTarget.getAttribute('href'); // e.g. "#about"
+    const targetId = event.currentTarget.getAttribute('href');
     const targetElement = document.querySelector(targetId);
 
     if (targetElement) {
-      const topPosition = targetElement.offsetTop - this.offset;
-      window.scrollTo({
-        top: topPosition,
-        behavior: 'smooth' // smooth scroll
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
+
+      if (this.offset > 0) {
+        // Wait for scrollIntoView to complete
+        setTimeout(() => {
+          window.scrollBy({
+            top: -this.offset,
+            behavior: 'smooth'
+          });
+        }, this.duration);
+      }
+    } else {
+      console.warn(`Element not found for selector: ${targetId}`);
     }
   }
 }
 
-// Initialize the scroller with your class or ID selector
-// Optional: pass offset (in pixels) if you have a fixed header
-const scroller = new SmoothScroller('.scroll-link', 50); // adjust 50 if you have a header height
+// Initialize scroller
+document.addEventListener("DOMContentLoaded", () => {
+  new SmoothScroller('.scroll-link', 50); // Adjust offset as needed
+});
+
+
+ // adjust 50 if you have a header height
 
 
 // MENU TOGGLE

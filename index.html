@@ -9,15 +9,19 @@
   <link rel="stylesheet" href="styles.css" />
   <body>
         <!-- Navigation Bar -->
-        <nav class="navbar">
-          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-          <ul class="nav-list" id="navList">
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
+         <div id="home">
+
+           <nav class="navbar" >
+             <button class="menu-toggle"  onclick="toggleMenu()" >☰</button>
+             <ul class="nav-list" id="navList">
+               <li><a href="#home">HOME</a></li>
+               <li><a href="#about">ABOUT</a></li>
+               <li><a href="#skills">SKILLS</a></li>
+               <li> <a href="#projects">PROJECTS</a></li>
+               <li><a href="#contact">CONTACT</a></li>
+             </ul>
+           </nav>
+         </div>
         
 
      <!-- Scrollable Sections -->
@@ -51,7 +55,7 @@
         <div class="grid grid--1x2">
           <div class="testimonial__image">
             <img
-              src="Images/Professional_Pic.jpg"
+              src="Images/2Professional_Pic.jpg.png"
               alt="A happy smilling customer"
             />
           </div>
@@ -65,8 +69,8 @@
                     <p class="quote__organisation">
                       I am a Frontend Engineer
                     </p>
-                    <p class="top-button btn-top "><button class="contact btn-top ">Contact me</button>
-                    <button class="cv-button btn-top ">Download CV</button></p>
+                    <p class="top-button btn-top   "><button class="contact btn-top  "><a href="#contact">Contact me</a></li></button>
+                      <button id="downloadCV" class="cv-button btn-top ">Download CV</button></p>
                   </div>
                 </div>
               </footer>
@@ -126,11 +130,8 @@
                   <div class="media__image"></div>
                   <div class="media__body">
                     <h3 class="media__title quote__author" >ABOUT ME</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Nobis, laborum aperiam. Rem, impedit? Debitis dolorum
-                      tenetur eaque odit, qui ullam excepturi, vel vitae, quia
-                      nulla minus cumque. Facere, provident ess.
+                    <p class="bio-text">
+                     Creative Front-end Developer with strong focus on crafting responsive, accessible, and user-centered web interfaces. Dedicated to translating design into seamless digital experiences through clean and efficient code.
                     </p>
                     <ul class="top">
                       <li><button id="downloadCV" class="cv-button btn-top ">Download CV</button></li>
@@ -163,21 +164,31 @@
         <!-- <span class="skill">PYTHON</span> -->
       </div>
     </section>
-    <section>
+    <section >
+      <div >
+        <h2 class="skills-section skills-title" id="projects">PROJECTS</h2>
+        <div class="info-container" id="infoContainer">
+        </div>
 
-      <h2 class="skills-section skills-title" id="projects">PROJECTS</h2>
-
-
-      <div class="info-container" id="infoContainer">
-        <!-- Info boxes will be dynamically added here -->
       </div>
+ 
     </section>
+    <!-- <section id="projects">
+      <p  class="skills-section skills-title">.</p>
+    
+      <div class="info-container" id="infoContainer">
+        <p>PROJECTS</p>
+      </div>
+    </section> -->
+    
+    
+    
     <!-- Scripts -->
     <!-- <script src="scripts.js"></script> -->
      <section>
        <!-- <EMAIL-JS -->
-    <div class="contact-container" id="contact">
-      <h2 >CONTACT ME</h2>
+    <div class="contact-container" >
+      <h2 id="contact" >CONTACT ME</h2>
       <form class="cont_me" id="contact-form">
         <input
           type="text"

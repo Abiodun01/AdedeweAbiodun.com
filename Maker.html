@@ -2,40 +2,113 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fixed Top Navigation</title>
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
-    <link rel="stylesheet" href="styles.css" />
+    <title>Smooth Scroll Test</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: #333;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 1000;
+      }
+
+      .content {
+        padding-top: 60px; /* Space for fixed header */
+      }
+
+      section {
+        height: 100vh;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #projects {
+        background-color: #f0f8ff;
+      }
+
+      nav a {
+        color: white;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
-    <!-- <EMAIL-JS -->
-    <div class="contact-container">
-      <h2>Contact the Developer</h2>
-      <form id="contact-form">
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your Name"
-          required
-        />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your Email"
-          required
-        />
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Your Message"
-          required
-        ></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <header>
+      <nav>
+        <a href="#projects" class="scroll-link">Go to Projects</a>
+      </nav>
+    </header>
+
+    <div class="content">
+      <section id="home">
+        <h2>Home</h2>
+        <p>Scroll down using the link in the header.</p>
+      </section>
+
+      <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="info-container" id="infoContainer">
+          <p>Project content appears here.</p>
+        </div>
+      </section>
     </div>
-    <!-- EMAILJS -->
-    <script src="scripts.js"></script>
+
+    <script>
+      class SmoothScroller {
+        constructor(linkSelector, offset = 0, duration = 500) {
+          this.links = document.querySelectorAll(linkSelector);
+          this.offset = offset;
+          this.duration = duration;
+          this.init();
+        }
+
+        init() {
+          this.links.forEach((link) => {
+            link.addEventListener("click", (e) => this.scrollHandler(e));
+          });
+        }
+
+        scrollHandler(event) {
+          event.preventDefault();
+
+          const targetId = event.currentTarget.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+            if (this.offset > 0) {
+              setTimeout(() => {
+                window.scrollBy({
+                  top: -this.offset,
+                  behavior: "smooth",
+                });
+              }, this.duration);
+            }
+          } else {
+            console.warn(`Element not found for selector: ${targetId}`);
+          }
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        new SmoothScroller(".scroll-link", 50);
+      });
+    </script>
   </body>
 </html>
