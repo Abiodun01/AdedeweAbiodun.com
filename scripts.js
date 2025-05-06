@@ -121,9 +121,10 @@ document
     const message = document.getElementById("message").value;
 
     console.log("Sending with values:", { name, email, message });
+    
 
     emailjs
-      .send("service_ibfcso6", "template_mjaq87g", {
+      .send("service_ibfcso6", "template_dq6hevu", {
         from_name: name,
         from_email: email,
         message: message,
