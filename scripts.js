@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
           text: "A simple website design",
           image: "Images/Moshify_Website.jpg",
           github: "https://github.com/Abiodun01/New_Mushify_App.git",
-          website: "https://abiodun01.github.io/New_Mushify_App/"
+          website: "https://rsponsive-moshify-app.vercel.app/"
       },
       // {
       //     title: "Project 3",
