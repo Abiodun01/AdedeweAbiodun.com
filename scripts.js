@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add a click event listener to trigger the download
   downloadButton.addEventListener("click", function () {
-      window.open("https://drive.google.com/uc?export=download&id=1CyuaMDd9YwbCJoyd9WijVrCswfyLtjaV", "_blank");
+      window.open("https://docs.google.com/document/d/1S8HW8REXhOWz2G8NSALKBVdp7OktKUBE/edit?usp=sharing&ouid=102514669088483821202&rtpof=true&sd=true", "_blank");
   });
 });
 
